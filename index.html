@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Diva - Women's Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>La Diva</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#cart">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products" class="product-grid">
+      <!-- Sample Products -->
+      <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Padded Bra" />
+        <h3>Padded Bra</h3>
+        <p>Category: Bra</p>
+        <p>Price: 450৳</p>
+        <button onclick="addToCart('Padded Bra', 450)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Cotton Panty" />
+        <h3>Cotton Panty</h3>
+        <p>Category: Panty</p>
+        <p>Price: 120৳</p>
+        <button onclick="addToCart('Cotton Panty', 120)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Hair Remover" />
+        <h3>Hair Remover</h3>
+        <p>Category: Personal Care</p>
+        <p>Price: 299৳</p>
+        <button onclick="addToCart('Hair Remover', 299)">Add to Cart</button>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: <span id="cart-total">0</span>৳</p>
+      <form onsubmit="sendToWhatsApp(); return false;">
+  <input type="text" id="cust-name" placeholder="Your Name" required />
+  <input type="text" id="cust-address" placeholder="Your Address" required />
+  <input type="tel" id="cust-phone" placeholder="Phone Number" required />
+  <button type="submit">Place Order on WhatsApp</button>
+</form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 La Diva. All rights reserved.</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>
